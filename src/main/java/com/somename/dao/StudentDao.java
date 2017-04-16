@@ -27,4 +27,15 @@ public class StudentDao {
         return this.students.values();
     }
 
+    public Student getStudent(int id){
+        return this.students.get(id);
+    }
+
+    public void deleteStudent(int id) {
+        this.students.remove(id);
+    }
+
+    public void updateStudent(Student student) {
+        this.students.put(student.getId(), student);
+    }
 }
